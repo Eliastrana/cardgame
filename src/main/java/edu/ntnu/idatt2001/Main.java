@@ -11,4 +11,9 @@ public class Main extends Application {
         gui.start(primaryStage);
     }
 
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
 }

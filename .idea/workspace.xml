@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5440cf9c-2596-43c2-808c-7d387e253ce8" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/DeckOfCards.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/HandOfCards.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/PlayingCard.java" afterDir="false" />
+    <list default="true" id="5440cf9c-2596-43c2-808c-7d387e253ce8" name="Changes" comment="created all the needed classes, as well as making it print pictures of cards. It refreshes new cards, that are then analyzed.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/Main_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/Styling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DeckOfCardsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/HandOfCardsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/DeckOfCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/DeckOfCards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/HandOfCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/HandOfCards.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +83,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.HandOfCardsTest.testToString">
     <configuration name="HandOfCards" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.ntnu.idatt2001.HandOfCards" />
       <module name="cardgame" />
@@ -97,8 +97,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HandOfCardsTest.testCheckSameType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cardgame" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HandOfCardsTest" />
+      <option name="METHOD_NAME" value="testCheckSameType" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HandOfCardsTest.testIsSameColor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cardgame" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HandOfCardsTest" />
+      <option name="METHOD_NAME" value="testIsSameColor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HandOfCardsTest.testSumOfHand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cardgame" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HandOfCardsTest" />
+      <option name="METHOD_NAME" value="testSumOfHand" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HandOfCardsTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cardgame" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HandOfCardsTest" />
+      <option name="METHOD_NAME" value="testToString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HandOfCardsTest.testToString" />
+        <item itemvalue="JUnit.HandOfCardsTest.testIsSameColor" />
+        <item itemvalue="JUnit.HandOfCardsTest.testCheckSameType" />
+        <item itemvalue="JUnit.HandOfCardsTest.testSumOfHand" />
         <item itemvalue="Application.HandOfCards" />
       </list>
     </recent_temporary>
@@ -112,7 +156,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678274909188</updated>
       <workItem from="1678274910381" duration="32359000" />
-      <workItem from="1678450763406" duration="8278000" />
+      <workItem from="1678450763406" duration="15316000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1678274946001</created>
@@ -128,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678275056735</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="created all the needed classes, as well as making it print pictures of cards. It refreshes new cards, that are then analyzed.">
+      <created>1678461681422</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678461681422</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +198,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="created all the needed classes, as well as making it print pictures of cards. It refreshes new cards, that are then analyzed." />
+    <option name="LAST_COMMIT_MESSAGE" value="created all the needed classes, as well as making it print pictures of cards. It refreshes new cards, that are then analyzed." />
   </component>
 </project>

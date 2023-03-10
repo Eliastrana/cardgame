@@ -22,10 +22,6 @@ public class HandOfCards {
         return hand.stream().mapToInt(PlayingCard::getFace).sum();
     }
 
-    public int getNumberOfCards(){
-        return hand.size();
-    }
-
 
     public boolean checkSameType(ArrayList<PlayingCard> hand) {
         char suit = hand.get(0).getSuit(); // Get the suit of the first card in the hand
@@ -35,9 +31,23 @@ public class HandOfCards {
             }
         }
         return true; // All cards have the same suit, return true
+
+
     }
 
 
+    public static boolean isSameColor(ArrayList<PlayingCard> hand) {
+        int numRed = 0;
+        int numBlack = 0;
+        for (PlayingCard card : hand) {
+            if (card.getSuit() == 'H' || card.getSuit() == 'D') {
+                numRed++;
+            } else {
+                numBlack++;
+            }
+        }
+        return numRed == 0 || numBlack == 0;
+    }
 
 
 
@@ -54,7 +64,7 @@ public class HandOfCards {
 
     public String toSmallString(){
         return
-                "Total value: " + sumOfHand() + "\n" + "Number of cards: " + getNumberOfCards() + "\n" + "Flush: " + checkSameType((ArrayList<PlayingCard>) hand);
+                sumOfHand()  + "\n" + isSameColor((ArrayList<PlayingCard>) hand)+ "\n"+ checkSameType((ArrayList<PlayingCard>) hand);
 
     }
 

@@ -1,7 +1,5 @@
 package edu.ntnu.idatt2001;
 
-
-import com.aspose.cells.Line;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -22,13 +20,15 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
 public class GUI extends Application {
 
+    Styling style = new Styling();
 
-    private Text displayInformationText = new Text(); // declare as class field
+
+    private Text displayInformationText = new Text();
 
     private Pane cardWindow = new Pane();
 
@@ -41,24 +41,31 @@ public class GUI extends Application {
         // Create the start page with a button
         VBox startLayout = new VBox();
         Text title = new Text("Card Game");
-        title.setStyle("-fx-font-size: 50px; -fx-font-weight: bold;");
+        title.setStyle(new Styling().getTitleStyle());
+
+        //title.setStyle(style.getTitleStyle());
 
         Button startButton = new Button("Start game");
-        startButton.setStyle("-fx-font-size: 30px; -fx-min-width: 100px; -fx-min-height: 50px;-fx-background-color: #9FB8AD; -fx-border-width: 2; -fx-padding: 10px; -fx-background-radius: 0.5em;");
+        startButton.setStyle(style.getButtonsStyle());
 
         startButton.setOnAction(e -> {
             // Open the card game GUI when the button is clicked
             VBox cardGameLayout = createCardGameLayout();
             Scene cardGameScene = new Scene(cardGameLayout, 1000, 700);
+
             primaryStage.setScene(cardGameScene);
             System.out.println("Start game button pressed");
         });
 
         startLayout.getChildren().addAll(title, startButton);
         startLayout.setAlignment(Pos.CENTER);
+        startLayout.setStyle(style.getBackgroundColor());
+
+
 
         // Create the scene for the start page
         Scene startScene = new Scene(startLayout, 1000, 700);
+
 
         primaryStage.setScene(startScene);
         primaryStage.setTitle("Card Game");
@@ -68,8 +75,10 @@ public class GUI extends Application {
     private VBox createCardGameLayout() {
 
 
+
         // Create the layout for the card game GUI
         VBox layout = new VBox();
+        layout.setStyle(style.getBackgroundColor());
 
         cardWindow.setPrefSize(500, 300);
         cardWindow.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE);
@@ -78,8 +87,8 @@ public class GUI extends Application {
                 Color.web("#284B63"),    // Background color
                 new CornerRadii(10),    // Corner radii (top-left, top-right, bottom-right, bottom-left)
                 Insets.EMPTY)));
-        cardWindow.setStyle("-fx-background-color: #D9D9D9;");
-        cardWindow.setBorder(new Border(new BorderStroke(Color.web("#284B63"), BorderStrokeStyle.SOLID, new CornerRadii(10), new BorderWidths(5))));
+        cardWindow.setStyle(style.getCardWindowColor());
+        cardWindow.setBorder(new Border(new BorderStroke(Color.web("#534B52"), BorderStrokeStyle.SOLID, new CornerRadii(10), new BorderWidths(5))));
 
 
 
@@ -107,9 +116,11 @@ public class GUI extends Application {
 
             displayInformationText.setVisible(false);
             displayInformationText.setText(currentHand.toSmallString());
+            displayInformationText.setStyle(style.getFontStyle());
+
 
         });
-        dealHand.setStyle("-fx-font-size: 30px; -fx-min-width: 100px; -fx-min-height: 50px;-fx-background-color: #9FB8AD; -fx-border-width: 2; -fx-padding: 10px; -fx-background-radius: 0.5em;");
+        dealHand.setStyle(style.getButtonsStyle());
 
 
         Button checkHand = new Button("Check hand");
@@ -121,15 +132,29 @@ public class GUI extends Application {
 
 
         });
-        checkHand.setStyle("-fx-font-size: 30px; -fx-min-width: 100px; -fx-min-height: 50px;-fx-background-color: #9FB8AD; -fx-border-width: 2; -fx-padding: 10px; -fx-background-radius: 0.5em;");
+        checkHand.setStyle(style.getButtonsStyle());
 
+
+        HBox statistics = new HBox();
+
+        Text constantText = new Text("Sum of cards: "+"\n" +"Same color: "+"\n"+ "Flush: ");
+        constantText.setStyle(style.getFontStyle());
+        constantText.setTextAlignment(TextAlignment.RIGHT);
+
+
+
+
+        statistics.setAlignment(Pos.CENTER);
+        statistics.getChildren().addAll(constantText, displayInformationText);
+
+        gameplayPane.setStyle(style.getBackgroundColor());
 
         gameplayPane.getChildren().addAll(checkHand, dealHand);
         gameplayPane.setAlignment(Pos.CENTER);
         gameplayPane.setSpacing(50);
         //CARD PICTURES PART
 
-        layout.getChildren().addAll(cardWindow, gameplayPane, displayInformationText);
+        layout.getChildren().addAll(cardWindow, gameplayPane, statistics);
         layout.setAlignment(Pos.CENTER);
         layout.setSpacing(50);
 

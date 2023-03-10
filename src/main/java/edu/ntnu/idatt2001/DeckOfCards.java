@@ -7,7 +7,7 @@ public class DeckOfCards {
 
     private final char[] suit = { 'S', 'H', 'D', 'C' };
     private final int[] face = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
-    private ArrayList<PlayingCard> totalDeck = new ArrayList<>();
+    public ArrayList<PlayingCard> totalDeck = new ArrayList<>();
 
     public DeckOfCards() {
         for (int i = 0; i < suit.length; i++) {
