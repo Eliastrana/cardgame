@@ -1,7 +1,14 @@
 package edu.ntnu.idatt2001;
 
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Card game yuppie!");
+import javafx.application.Application;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        GUI gui = new GUI();
+        gui.start(primaryStage);
     }
+
 }
