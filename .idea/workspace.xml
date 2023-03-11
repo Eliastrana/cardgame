@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5440cf9c-2596-43c2-808c-7d387e253ce8" name="Changes" comment="adding the cards to github">
+    <list default="true" id="5440cf9c-2596-43c2-808c-7d387e253ce8" name="Changes" comment="fixed so that the information now is within the its own pane, as well as the text not moving when the button is pressed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/DeckOfCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/DeckOfCards.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/HandOfCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/HandOfCards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/Styling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/ntnu/idatt2001/Styling.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +155,7 @@
       <updated>1678274909188</updated>
       <workItem from="1678274910381" duration="32359000" />
       <workItem from="1678450763406" duration="15316000" />
-      <workItem from="1678478038831" duration="1917000" />
+      <workItem from="1678478038831" duration="6124000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1678274946001</created>
@@ -186,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678478275768</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finished all the statistics, need to fix test.">
+      <created>1678532327827</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678532327827</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +213,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="created all the needed classes, as well as making it print pictures of cards. It refreshes new cards, that are then analyzed." />
     <MESSAGE value="adding the cards to github" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding the cards to github" />
+    <MESSAGE value="finished all the statistics, need to fix test." />
+    <MESSAGE value="fixed so that the information now is within the its own pane, as well as the text not moving when the button is pressed" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed so that the information now is within the its own pane, as well as the text not moving when the button is pressed" />
   </component>
 </project>

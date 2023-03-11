@@ -74,10 +74,12 @@ public class GUI extends Application {
         Button dealHand = new Button("Deal hand");
         dealHand.setOnAction(e -> {
 
+            cardWindow.getChildren().clear();
+
             HandOfCards currentHand = new HandOfCards(new DeckOfCards().drawHand(5));
             System.out.println("Deal hand button pressed");
 
-            int spacing = 20; // Set the desired spacing between the images
+            int spacing = 20;
             int startX = 45;
 
             for(int i = 0; i < 5; i++) {
@@ -108,20 +110,44 @@ public class GUI extends Application {
         });
         checkHand.setStyle(style.getButtonsStyle());
 
-        HBox statistics = new HBox();
+        Pane informationPane = new Pane();
+        informationPane.setPrefSize(500, 300);
+        informationPane.setStyle(style.getCardWindowColor());
+        informationPane.setBorder(new Border(new BorderStroke(Color.web("#534B52"), BorderStrokeStyle.SOLID, new CornerRadii(10), new BorderWidths(5))));
+        informationPane.setMaxWidth(350);
+        informationPane.setMaxHeight(150);
+
+
         Text constantText = new Text("Sum of cards: "+"\n" +"Same color: "+"\n"+ "Flush: " + "\n" + "Heart values: " +"\n" + "Queen of Spades: ");
         constantText.setStyle(style.getFontStyle());
         constantText.setTextAlignment(TextAlignment.RIGHT);
 
-        statistics.setAlignment(Pos.CENTER);
-        statistics.getChildren().addAll(constantText, displayInformationText);
+        VBox constantTextVbox = new VBox();
+        constantTextVbox.setPadding(new Insets(20));
+        constantTextVbox.setAlignment(Pos.CENTER_LEFT);
+        constantTextVbox.getChildren().add(constantText);
+
+        displayInformationText.setTextAlignment(TextAlignment.LEFT);
+        VBox displayInformationTextVBox = new VBox();
+        displayInformationTextVBox.setPadding(new Insets(5));
+        displayInformationTextVBox.setAlignment(Pos.CENTER_RIGHT);
+        displayInformationTextVBox.getChildren().add(displayInformationText);
+
+
+        HBox informationPaneHBox = new HBox();
+        informationPaneHBox.setPadding(new Insets(5));
+        informationPaneHBox.setAlignment(Pos.TOP_CENTER);
+        informationPaneHBox.getChildren().addAll(constantTextVbox, displayInformationTextVBox);
+
+
+        informationPane.getChildren().addAll(informationPaneHBox);
 
         gameplayPane.setStyle(style.getBackgroundColor());
         gameplayPane.getChildren().addAll(checkHand, dealHand);
         gameplayPane.setAlignment(Pos.CENTER);
         gameplayPane.setSpacing(50);
 
-        layout.getChildren().addAll(cardWindow, gameplayPane, statistics);
+        layout.getChildren().addAll(cardWindow, gameplayPane, informationPane);
         layout.setAlignment(Pos.CENTER);
         layout.setSpacing(50);
 

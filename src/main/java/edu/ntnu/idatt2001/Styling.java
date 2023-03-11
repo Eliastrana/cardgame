@@ -7,7 +7,7 @@ public class Styling {
 
     private String buttonsStyle = "-fx-background-color: #2D232E; -fx-text-fill: #E0DDCF; -fx-font-size: 20px; -fx-font-weight: bold; -fx-border-color: #ffffff; -fx-border-width: 2px; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-padding: 10px;";
 
-    private String fontStyle = "-fx-font: Times; -fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #2D232E; -fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2px; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-padding: 10px;";
+    private String fontStyle = "-fx-font: Times; -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2D232E; -fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2px; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-padding: 10px;";
 
 
 
