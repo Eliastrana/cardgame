@@ -22,19 +22,15 @@ public class HandOfCards {
         return hand.stream().mapToInt(PlayingCard::getFace).sum();
     }
 
-
     public boolean checkSameType(ArrayList<PlayingCard> hand) {
-        char suit = hand.get(0).getSuit(); // Get the suit of the first card in the hand
+        char suit = hand.get(0).getSuit();
         for (int i = 1; i < hand.size(); i++) {
             if (hand.get(i).getSuit() != suit) {
-                return false; // If any other card has a different suit, return false
+                return false;
             }
         }
-        return true; // All cards have the same suit, return true
-
-
+        return true;
     }
-
 
     public static boolean isSameColor(ArrayList<PlayingCard> hand) {
         int numRed = 0;
@@ -49,7 +45,26 @@ public class HandOfCards {
         return numRed == 0 || numBlack == 0;
     }
 
+    public String getHeartsString() {
+        StringBuilder heartsString = new StringBuilder();
+        for (PlayingCard card : hand) {
+            if (card.getSuit() == 'H') {
+                heartsString.append(card.getAsString()).append(" ");
+            }
+        }
+        return heartsString.toString();
+    }
 
+    public boolean checkForQueenSpade() {
+        StringBuilder heartsString = new StringBuilder();
+        for (PlayingCard card : hand) {
+            if (card.getSuit() == 'S' && card.getFace() == 12){
+                heartsString.append(card.getAsString()).append(" ");
+                return true;
+            }
+        }
+        return false;
+    }
 
     @Override
     public String toString() {
@@ -57,25 +72,17 @@ public class HandOfCards {
         for (PlayingCard card : hand) {
             handString.append(card.getAsString()).append(" ");
         }
-
         return handString.toString();
     }
 
-
     public String toSmallString(){
-        return
-                sumOfHand()  + "\n" + isSameColor((ArrayList<PlayingCard>) hand)+ "\n"+ checkSameType((ArrayList<PlayingCard>) hand);
-
+        return sumOfHand()  + "\n" + isSameColor((ArrayList<PlayingCard>) hand) + "\n"
+                + checkSameType((ArrayList<PlayingCard>) hand) + "\n" + getHeartsString() + "\n" + checkForQueenSpade();
     }
-
-
 
     public static void main(String[] args) {
         HandOfCards hand = new HandOfCards();
         System.out.println(hand);
         System.out.println(hand.toSmallString());
     }
-
-
-
 }

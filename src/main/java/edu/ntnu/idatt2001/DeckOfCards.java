@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class DeckOfCards {
-
     private final char[] suit = { 'S', 'H', 'D', 'C' };
     private final int[] face = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
     public ArrayList<PlayingCard> totalDeck = new ArrayList<>();
@@ -27,16 +26,13 @@ public class DeckOfCards {
         }
     }
 
- public ArrayList<PlayingCard> drawHand(int n) {
-     shuffle(); // Shuffle the deck
-     ArrayList<PlayingCard> hand = new ArrayList<>();
+    public ArrayList<PlayingCard> drawHand(int n) {
+        shuffle(); // Shuffle the deck
+        ArrayList<PlayingCard> hand = new ArrayList<>();
 
-     for (int i = 0; i < n; i++) {
-         hand.add(totalDeck.get(i)); // Add the first n cards from the shuffled deck
-     }
-     return hand;
+        for (int i = 0; i < n; i++) {
+            hand.add(totalDeck.get(i)); // Add the first n cards from the shuffled deck
+        }
+        return hand;
     }
-
-
-
 }
